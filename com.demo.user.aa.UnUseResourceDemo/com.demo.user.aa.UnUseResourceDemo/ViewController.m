@@ -12,8 +12,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) Login *login;
-
+@property (nonatomic, strong) UILabel *login;
 @end
 
 @implementation ViewController
@@ -21,8 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.login = [[Login alloc] init];
-    [self.login login];
+    self.login = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 100, 50)];
+    self.login.text = @"登录";
+    [self.view addSubview:self.login];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(writefile)
                                                  name:UIApplicationDidEnterBackgroundNotification

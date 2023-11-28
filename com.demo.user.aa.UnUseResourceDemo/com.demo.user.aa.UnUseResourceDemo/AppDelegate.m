@@ -6,8 +6,16 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Util.h"
+#import "Tool.h"
+#import "Login.h"
+#import "Register.h"
 @interface AppDelegate ()
+
+@property (nonatomic, strong) Util *objc;
+@property (nonatomic, strong) Tool *objc1;
+@property (nonatomic, strong) Login *login;
+@property (nonatomic, strong) Register *registerOBj;
 
 @end
 
@@ -16,6 +24,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.objc = [[Util alloc] init];
+    [self.objc Utiltool6];
+    [self.objc Utiltool7];
+    [self.objc Utiltool8];
+    [self.objc Utiltool9];
+    [self.objc Utiltool10];
+    
+    self.objc1 = [[Tool alloc] init];
+    [self.objc1 Tooltool6];
+    [self.objc1 Tooltool7];
+    [self.objc1 Tooltool8];
+    [self.objc1 Tooltool9];
+    [self.objc1 Tooltool10];
+    
+    self.login = [[Login alloc] init];
+    [self.login login];
+    
+    self.registerOBj = [[Register alloc] init];
+    [self.registerOBj registerUser];
+    
     return YES;
 }
 
